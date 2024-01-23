@@ -1,0 +1,34 @@
+programa {
+  funcao inicio() {
+    var
+       vetor: vetor[1..10] de inteiro
+       soma, media: real
+       i: inteiro
+
+    para i de 1 ate 10 faca
+       escreva("Digite o ", i, "º número: ")
+       leia(vetor[i])
+    fimpara
+    escreva("Elementos nos índices ímpares: ")
+    para i de 1 ate 10 passo 2 faca
+       escreva(vetor[i], " ")
+    fimpara
+    escreval("") 
+    escreva("Números pares no vetor: ")
+    para i de 1 ate 10 faca
+       se vetor[i] mod 2 = 0 entao
+          escreva(vetor[i], " ")
+       fimse
+    fimpara
+    escreval("")
+    soma := 0
+    para i de 1 ate 10 faca
+       soma := soma + vetor[i]
+    fimpara
+
+    media := soma / 10
+    
+    escreva("Soma dos elementos: ", soma)
+    escreva("Média dos elementos: ", media)
+  }
+}
